@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Maps Example</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key"></script>
+    <script>
+      function initMap() {
+        var locations = [
+          {lat: -17.971078, lng: -67.096305, title: "Sucursal 1"},
+          {lat: -17.972180, lng: -67.101970, title: "Sucursal 2"},
+          {lat: -17.969802, lng: -67.106648, title: "Sucursal 3"}
+        ];
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: {lat: -17.968296, lng: -67.107809}
+        }); 
+
+        for (var i = 0; i < locations.length; i++) {
+          var marker = new google.maps.Marker({
+            position: {lat: locations[i].lat, lng: locations[i].lng},
+            map: map,
+            title: locations[i].title
+          });
+        }
+      }
+    </script>
+  </head>
+  <body onload="initMap()">
+    <div id="map" style="height: 800px; width: 100%;"></div>
+  </body>
+</html>
