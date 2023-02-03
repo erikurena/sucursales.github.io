@@ -2,6 +2,32 @@
 <html>
   <head>
     <title>Google Maps Example</title>
+    <style>
+              body {
+            background-image: url("https://source.unsplash.com/1600x900/?city");
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
+          .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-image: url(https://i.imgur.com/oxUOzLb.jpg);
+          background-size: cover;
+          height: 100vh;
+        }
+        h2{ 
+            color: white;
+        }
+        p{
+            color: white;
+            margin: 0;
+        }
+        .btn {
+          width: 100%;
+          margin: 20px 0;
+        }
+    </style>
     <script src="https://maps.googleapis.com/maps/api/js?key"></script>
     <script>
       function initMap() {
